@@ -6,8 +6,8 @@ Inspired on [dashersw/docker-node-pm2](https://github.com/dashersw/docker-node-p
 ## Features
 
 - Allows to pass parameters to the pm2 (and through it, to the app itself).
-- Image build over node 4 and node 5.
-- Volumes for the app code, and for the logs.
+- Can choose from different versions of node.
+- Volumes for the application code, and for the logs.
 
 ## Usage
 
@@ -24,10 +24,10 @@ docker run -d \
 
 ### Explanation
 
-- Environment variables
--- APP: entry js file. (Default is `app.js`)
--- PARAMETERS: optional parameters to pass to pm2. No default set.
+- Environment variables 
+	- **APP**: entry js file. (Default is `app.js`)
+	- **PARAMETERS**: optional parameters to pass to pm2. Default is empty.
 - The code should be provided using a volume.
 - Optionally, the logs can be connected using a volume.
 - You might want to expose the 3000 port, to make the app. visible.
-- Change to `node4` in the image tag, if you want to use node 4 instead.
+- Change the image tag to use a different node version (e.g. `node4`).
