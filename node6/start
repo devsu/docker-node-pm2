@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z "$APP" ]; then
+    export APP=process.json
+fi
+
+cd /var/app
+pm2 start -x $APP --no-daemon -e /var/log/app/err.log -o /var/log/app/out.log $PARAMETERS
