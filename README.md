@@ -20,7 +20,7 @@ docker run -d \
     -v /path/to/app/source:/var/app \
     -v /path/to/store/logs:/var/log/app \
     -p 3000:3000 \
-    devsu/node-pm2:node5
+    devsu/node-pm2:latest
 ```
 
 ### Explanation
