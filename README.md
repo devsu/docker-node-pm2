@@ -15,7 +15,7 @@ Inspired on [dashersw/docker-node-pm2](https://github.com/dashersw/docker-node-p
 ```
 docker run -d \
     --name my-awesome-app \
-    -e APP=process.json \
+    -e APP=process.yml \
     -e PARAMETERS="--watch" \
     -v /path/to/app/source:/var/app \
     -v /path/to/store/logs:/var/log/app \
@@ -26,7 +26,7 @@ docker run -d \
 ### Explanation
 
 - Environment variables 
-	- **APP**: [http://pm2.keymetrics.io/docs/usage/application-declaration/](application declaration file). The default value is `process.json`. You could directly call the script as well. (e.g. `APP=app.js`).
+	- **APP**: [http://pm2.keymetrics.io/docs/usage/application-declaration/](application declaration file). The default value is `process.yml`. You could directly call the script as well. (e.g. `APP=app.js`).
 	- **PARAMETERS**: optional parameters to pass to pm2.
 - The code should be provided using a volume connected to `/var/app`.
 - Optionally, the logs can be connected using a volume connected to `/var/log/app`.
