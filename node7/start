@@ -5,4 +5,4 @@ if [ -z "$APP" ]; then
 fi
 
 cd /var/app
-pm2-docker start -x $APP --no-daemon -e /var/log/app/err.log -o /var/log/app/out.log $PARAMETERS
+pm2 start -x $APP --no-daemon -e /var/log/app/err.log -o /var/log/app/out.log $PARAMETERS
