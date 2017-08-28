@@ -2,7 +2,7 @@ FROM node:0.10
 
 MAINTAINER Cesar Salazar "csalazar@devsu.com"
 
-RUN npm install -g pm2@latest
+RUN npm install -g pm2@1.1.1
 
 VOLUME ["/var/app"]
 VOLUME ["/var/log/app"]
